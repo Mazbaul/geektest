@@ -24,7 +24,6 @@ Route::post('/send-money-without-auth', [App\Http\Controllers\TransactionControl
 
 
 Route::middleware('auth:api')->group(function () {
-    Route::get('/user-profile', [UserController::class, 'userProfile']);
     Route::post('/logout', [UserController::class, 'logout']);
 
     Route::post('/send-money', [TransactionController::class, 'sendMoney']);
